@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "314ba979-4438-4a80-a83c-94cbd5fb3474",
+		"name": "SendMail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "simple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\":\"abc@gmail.com\", //email address that you sent to\n    \"message\": \"This is a simple email sent by java\",\n    \"subject\": \"I love you\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/email/simple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"email",
+						"simple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attach",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\":\"abc@gmail.com\", //email address that you sent to\n    \"message\": \"This is a simple email sent by java\",\n    \"subject\": \"I love you\",\n    \"attachment\": \"/abc/path/file.extension\" //file you wanna attach\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/email/attachment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"email",
+						"attachment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
